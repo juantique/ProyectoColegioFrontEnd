@@ -1,0 +1,18 @@
+
+
+<div class="container">
+    <!--Formulario toma los datos en memoria a traves del editarColegio. Y con un ngSubmit me llama al metodo post Colegio
+    y que tiene como parametros lo que tenga editar colegio. Es decir: idformcolegio type long y nombreidformcolegio type String-->
+    <!--<form [formGroup]="editarColegio" #formColegio="ngForm" (ngSubmit)="putFormColegio(formColegio.value)">-->
+    <form [formGroup]="editarColegio" (ngSubmit)="putFormColegio(editarColegio.value)">
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Colegio Inscrito</label><br><br>
+            <input type="text" class="form-control" placeholder="Nombre del Colegio" formControlName="nombreidformcolegio">
+        </div>
+        <br><br>
+        <button type="submit" class="btn btn-primary" >Actualizar</button>
+    </form>
+
+</div>
+
+<router-outlet></router-outlet>

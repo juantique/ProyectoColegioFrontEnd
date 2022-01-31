@@ -1,0 +1,24 @@
+   <div class="container">
+
+        <h3>Profesores Inscritos al Plantel</h3><br>
+
+        <!--<button type="button" class="btn btn-primary" (click)="nuevoColegio()">Nuevo Colegio</button>-->
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col"># Profesor</th>
+                <th scope="col">Nombre del Profesor</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--CON UN FOR RECORRE LA LISTA DE LA VARIABLE PROFESORES QUE VIENE DEL METODO LISTAR PROFESORES DESDE EL COMPONENTE-->
+            <tr *ngFor="let i of profesores">
+                <th scope="row">{{ i.id}}</th>
+                <td>{{ i.nombre}}</td>
+            </tr>
+            </tbody>
+    </table>
+    </div>
+<router-outlet></router-outlet>
+

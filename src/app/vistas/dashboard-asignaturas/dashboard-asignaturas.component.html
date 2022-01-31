@@ -1,0 +1,47 @@
+
+
+    <!--//<ul>
+        <li *ngFor="let elemento of asignatura">
+            {{elemento.id}}
+            {{elemento.nombre}}
+            {{elemento.profesores}}
+            {{elemento.cursos}}
+        </li>
+    </ul>
+
+    <pre>
+        {{asignatura | json}}
+    </pre>
+    <!--
+    <script type="text/javascript">
+        asignatura
+        for(x in asignatura){
+            alert(asignatura[x]);
+        }
+    </script>-->
+    
+    <div class="container">
+
+        <h3>Asignaturas Asignadas al Curso y al Cuerpo Docente </h3><br>
+
+        <!--<button type="button" class="btn btn-primary" (click)="nuevoColegio()">Nuevo Colegio</button>-->
+
+        <table class="table table-hover">
+            <thead>
+            <tr>
+                <th scope="col"># Asignaturas</th>
+                <th scope="col"> Nombre</th>
+                <th scope="col"># Profesor</th>
+                <th scope="col"># Curso</th>
+            </tr>
+            </thead>
+            <tbody>
+            <!--CON UN FOR RECORRE LA LISTA DE LA VARIABLE ESTUDIANTES QUE VIENE DEL METODO LISTAR ESTUDIANTES DESDE EL COMPONENTE-->
+            <tr *ngFor="let i of asignatura">
+                <th scope="row">{{ i.id}}</th>
+                <td>{{ i.nombre}}</td>
+            </tr>
+            </tbody>
+    </table>
+    </div>
+<router-outlet></router-outlet>
